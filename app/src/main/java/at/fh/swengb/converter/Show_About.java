@@ -12,6 +12,14 @@ public class Show_About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show__about);
 
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("resultOfConv");
+
+        TextView textViewMessage   = (TextView) findViewById(R.id.textViewResult);
+        textViewMessage.setText("Result: "+message+" Gibibyte");
+
+
+
 
     }
 }

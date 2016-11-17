@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void showAbout(View view) {
         Intent intent = new Intent(this, Show_About.class);
+        String message = resultView.getText().toString();
+        intent.putExtra("resultOfConv",message);
         startActivity(intent);
     }
 }
